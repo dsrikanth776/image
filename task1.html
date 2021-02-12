@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>creat a log </title>
+        <script>
+              var attempt = 3; // Variable to count number of attempts.
+// Below function Executes on click of login button.
+function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if ( username == "Srikanth123" && password == "Srikanth@123"){
+alert ("Login successfully");
+window.location = "success.html"; // Redirecting to other page.
+return false;
+}
+else{
+attempt --;// Decrementing by one.
+alert("You have left "+attempt+" attempt;");
+// Disabling fields after 3 attempts.
+if( attempt == 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+} 
+
+        </script>
+        <style>
+         
+    body {
+        background-image: url("1.jpg");
+        background-size: cover;
+        
+        }
+  div{
+      border:3px solid black;
+      width:310px;
+      height:320px ;
+      background-image:url(new1.jpg);
+      margin-left: 2px;
+      text-align: center;
+  }
+  
+      
+      form{
+          padding:50px;
+          box-sizing: border-box;
+          border: 0px solid rgb(214, 214, 226);
+          margin-left:60% ;
+   
+          
+          
+      }
+      button {
+    color: white;
+    padding: 10px 6px;
+    margin: 2px 20;
+    border: 2px;
+    background-color: rgb(24, 77, 24);
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+  
+    
+      }
+      h1{
+          color: whitesmoke;
+      }
+     label{
+         color: whitesmoke;
+     }
+        </style>
+    </head>
+    <body>
+      
+        <form>
+
+            
+            
+            <div class="container">
+                <h1>Sign Up</h1>
+                <img src="logo.jpg" width="50px" height="50px">
+               
+            
+          
+              <br><br>
+            
+                <br>
+                <label>User Name :</label>
+                <input type="text" name="username" id="username"/><br><br>
+  
+                <label>Password :</label>
+                <input type="password" name="password" id="password"/><br><br>
+        
+                  <a href="C:\Users\Bharath Naidu\Desktop\javascript\class11.html" ><input type="button" id="submit" value="Login" onclick="validate()"></a>
+                  <p >forget password ?</p>
+                
+              </div>
+    
+      
+      
+
+        </form>
+     
+    </body>
+</html>
